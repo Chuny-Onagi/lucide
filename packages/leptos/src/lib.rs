@@ -35,3 +35,5 @@ pub mod heart;
 pub mod chevron;
 pub mod heading;
 pub mod chess;
+pub mod git;
+
