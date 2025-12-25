@@ -23,3 +23,5 @@ pub mod monitor;
 pub mod mouse;
 pub mod corner;
 pub mod folder;
+pub mod square;
+pub mod calendar;
