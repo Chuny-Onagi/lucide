@@ -33,3 +33,1087 @@ pub fn Folder(
         </svg>
     }
 }
+#[component]
+pub fn FolderArchive(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="15" cy="19" r="2" />
+            <path d="M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1" />
+            <path d="M15 11v-1" />
+            <path d="M15 17v-2" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderCheck(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="m9 13 2 2 4-4" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderClock(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M16 14v2.2l1.6 1" />
+            <path d="M7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2" />
+            <circle cx="16" cy="16" r="6" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderClosed(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="M2 10h20" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderCode(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M10 10.5 8 13l2 2.5" />
+            <path d="m14 10.5 2 2.5-2 2.5" />
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderCog(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M10.3 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.98a2 2 0 0 1 1.69.9l.66 1.2A2 2 0 0 0 12 6h8a2 2 0 0 1 2 2v3.3" />
+            <path d="m14.305 19.53.923-.382" />
+            <path d="m15.228 16.852-.923-.383" />
+            <path d="m16.852 15.228-.383-.923" />
+            <path d="m16.852 20.772-.383.924" />
+            <path d="m19.148 15.228.383-.923" />
+            <path d="m19.53 21.696-.382-.924" />
+            <path d="m20.772 16.852.924-.383" />
+            <path d="m20.772 19.148.924.383" />
+            <circle cx="18" cy="18" r="3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderDot(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+            <circle cx="12" cy="13" r="1" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderDown(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="M12 10v6" />
+            <path d="m15 13-3 3-3-3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderGit2(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M18 19a5 5 0 0 1-5-5v8" />
+            <path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" />
+            <circle cx="13" cy="12" r="2" />
+            <circle cx="20" cy="19" r="2" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderGit(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="12" cy="13" r="2" />
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="M14 13h3" />
+            <path d="M7 13h3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderHeart(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M10.638 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v3.417" />
+            <path d="M14.62 18.8A2.25 2.25 0 1 1 18 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderInput(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2 9V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1" />
+            <path d="M2 13h10" />
+            <path d="m9 16 3-3-3-3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderKanban(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+            <path d="M8 10v4" />
+            <path d="M12 10v2" />
+            <path d="M16 10v6" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderKey(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="16" cy="20" r="2" />
+            <path d="M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2" />
+            <path d="m22 14-4.5 4.5" />
+            <path d="m21 15 1 1" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderLock(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <rect width="8" height="5" x="14" y="17" rx="1" />
+            <path d="M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2.5" />
+            <path d="M20 17v-2a2 2 0 1 0-4 0v2" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderMinus(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M9 13h6" />
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderOpenDot(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2" />
+            <circle cx="14" cy="15" r="1" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderOpen(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderOutput(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2 7.5V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-1.5" />
+            <path d="M2 13h10" />
+            <path d="m5 10-3 3 3 3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderPen(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2 11.5V5a2 2 0 0 1 2-2h3.9c.7 0 1.3.3 1.7.9l.8 1.2c.4.6 1 .9 1.7.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-9.5" />
+            <path d="M11.378 13.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderPlus(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M12 10v6" />
+            <path d="M9 13h6" />
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderRoot(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+            <circle cx="12" cy="13" r="2" />
+            <path d="M12 15v5" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderSearch2(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="11.5" cy="12.5" r="2.5" />
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="M13.3 14.3 15 16" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderSearch(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1" />
+            <path d="m21 21-1.9-1.9" />
+            <circle cx="17" cy="17" r="3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderSymlink(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2 9.35V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" />
+            <path d="m8 16 3-3-3-3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderSync(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v.5" />
+            <path d="M12 10v4h4" />
+            <path d="m12 14 1.535-1.605a5 5 0 0 1 8 1.5" />
+            <path d="M22 22v-4h-4" />
+            <path d="m22 18-1.535 1.605a5 5 0 0 1-8-1.5" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderTree(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-.8-.4l-.9-1.2A1 1 0 0 0 15 3h-2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z" />
+            <path d="M20 21a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2.9a1 1 0 0 1-.88-.55l-.42-.85a1 1 0 0 0-.92-.6H13a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z" />
+            <path d="M3 5a2 2 0 0 0 2 2h3" />
+            <path d="M3 3v13a2 2 0 0 0 2 2h3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderUp(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="M12 10v6" />
+            <path d="m9 13 3-3 3 3" />
+        </svg>
+    }
+}
+#[component]
+pub fn FolderX(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+            <path d="m9.5 10.5 5 5" />
+            <path d="m14.5 10.5-5 5" />
+        </svg>
+    }
+}
+#[component]
+pub fn Folders(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z" />
+            <path d="M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1" />
+        </svg>
+    }
+}

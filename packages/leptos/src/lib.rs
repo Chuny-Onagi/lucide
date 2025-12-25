@@ -20,3 +20,6 @@ pub mod circle;
 pub mod mail;
 pub mod receipt;
 pub mod monitor;
+pub mod mouse;
+pub mod corner;
+pub mod folder;
