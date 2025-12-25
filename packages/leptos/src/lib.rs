@@ -25,3 +25,10 @@ pub mod corner;
 pub mod folder;
 pub mod square;
 pub mod calendar;
+pub mod scan;
+pub mod chart;
+pub mod ticket;
+pub mod search;
+pub mod volume;
+pub mod lamp;
+
