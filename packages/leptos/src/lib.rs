@@ -31,4 +31,7 @@ pub mod ticket;
 pub mod search;
 pub mod volume;
 pub mod lamp;
-
+pub mod heart;
+pub mod chevron;
+pub mod heading;
+pub mod chess;
