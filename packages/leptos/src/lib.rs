@@ -6,3 +6,4 @@ pub mod badge;
 pub mod list;
 pub mod map;
 pub mod message;
+pub mod cloud;
