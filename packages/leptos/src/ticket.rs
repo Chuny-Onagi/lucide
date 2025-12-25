@@ -250,7 +250,8 @@ pub fn TicketX(
         </svg>
     }
 }
-[component]
+
+#[component]
 pub fn TicketsPlane(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
