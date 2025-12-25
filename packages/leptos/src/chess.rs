@@ -1,3 +1,5 @@
+use leptos::{prelude::*, svg::Svg};
+
 #[component]
 pub fn ChessBishop(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
