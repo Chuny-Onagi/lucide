@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-pub mod a_arrow;
-pub mod alarm_clock;
-pub mod align;
-pub mod arrow;
-pub mod badge;
-pub mod list;
-pub mod map;
-pub mod message;
-pub mod cloud;
-pub mod user;
-pub mod users;
-pub mod octagon;
-pub mod panel;
-pub mod book;
-pub mod file;
-pub mod clock;
-pub mod shield;
-pub mod clipboard;
-pub mod circle;
-pub mod mail;
-pub mod receipt;
-pub mod monitor;
-pub mod mouse;
-pub mod corner;
-pub mod folder;
-pub mod square;
-pub mod calendar;
-pub mod scan;
-pub mod chart;
-pub mod ticket;
-pub mod search;
-pub mod volume;
-pub mod lamp;
-pub mod heart;
-pub mod chevron;
-pub mod heading;
-pub mod chess;
-pub mod git;
-
-=======
 pub mod a_arrow;
 pub mod alarm_clock;
 pub mod align;
@@ -102,5 +61,3 @@ pub mod package;
 pub mod battery;
 pub mod diamond;
 pub mod flip;
-
->>>>>>> c43383e (-- consolidate flip icons)
