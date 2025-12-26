@@ -63,4 +63,4 @@ pub mod diamond;
 pub mod flip;
 pub mod link;
 pub mod wallet;
-
+pub mod refresh;
