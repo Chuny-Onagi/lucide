@@ -1,6 +1,6 @@
 use leptos::{prelude::*, svg::Svg};
 #[component]
-pub fn BrickWall(
+pub fn Columns2(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -30,18 +30,12 @@ pub fn BrickWall(
             stroke-linejoin="round"
         >
             <rect width="18" height="18" x="3" y="3" rx="2" />
-            <path d="M12 9v6" />
-            <path d="M16 15v6" />
-            <path d="M16 3v6" />
-            <path d="M3 15h18" />
-            <path d="M3 9h18" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <path d="M12 3v18" />
         </svg>
     }
 }
 #[component]
-pub fn BrickWallFire(
+pub fn Columns3Cog(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -70,18 +64,23 @@ pub fn BrickWallFire(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M16 3v2.107" />
-            <path d="M17 9c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 22 17a5 5 0 0 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C13 11.5 16 9 17 9" />
-            <path d="M21 8.274V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.938" />
-            <path d="M3 15h5.253" />
-            <path d="M3 9h8.228" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <path d="M10.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5" />
+            <path d="m14.3 19.6 1-.4" />
+            <path d="M15 3v7.5" />
+            <path d="m15.2 16.9-.9-.3" />
+            <path d="m16.6 21.7.3-.9" />
+            <path d="m16.8 15.3-.4-1" />
+            <path d="m19.1 15.2.3-.9" />
+            <path d="m19.6 21.7-.4-1" />
+            <path d="m20.7 16.8 1-.4" />
+            <path d="m21.7 19.4-.9-.3" />
+            <path d="M9 3v18" />
+            <circle cx="18" cy="18" r="3" />
         </svg>
     }
 }
 #[component]
-pub fn BrickWallShield(
+pub fn Columns3(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -110,14 +109,46 @@ pub fn BrickWallShield(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M12 9v1.258" />
-            <path d="M16 3v5.46" />
-            <path d="M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75" />
-            <path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z" />
-            <path d="M3 15h7" />
-            <path d="M3 9h12.142" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M9 3v18" />
+            <path d="M15 3v18" />
+        </svg>
+    }
+}
+#[component]
+pub fn Columns4(
+    #[prop(default = 24.into(), into)] size: Signal<usize>,
+    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
+    #[prop(default = "none".into(), into)] fill: Signal<String>,
+    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
+    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
+    #[prop(optional)] node_ref: NodeRef<Svg>,
+) -> impl IntoView {
+    let stroke_width = Signal::derive(move || {
+        if absolute_stroke_width.get() {
+            stroke_width.get() * 24 / size.get()
+        } else {
+            stroke_width.get()
+        }
+    });
+    view! {
+        <svg
+            node_ref=node_ref
+            class:lucide=true
+            xmlns="http://www.w3.org/2000/svg"
+            width=size
+            height=size
+            viewBox="0 0 24 24"
+            fill=fill
+            stroke=color
+            stroke-width=stroke_width
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M7.5 3v18" />
+            <path d="M12 3v18" />
+            <path d="M16.5 3v18" />
         </svg>
     }
 }

@@ -64,3 +64,6 @@ pub mod flip;
 pub mod link;
 pub mod wallet;
 pub mod refresh;
+pub mod brick_wall;
+pub mod briefcase;
+
