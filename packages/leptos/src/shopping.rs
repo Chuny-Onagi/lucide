@@ -1,6 +1,6 @@
 use leptos::{prelude::*, svg::Svg};
 #[component]
-pub fn BrickWall(
+pub fn ShoppingBag(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -29,19 +29,14 @@ pub fn BrickWall(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <rect width="18" height="18" x="3" y="3" rx="2" />
-            <path d="M12 9v6" />
-            <path d="M16 15v6" />
-            <path d="M16 3v6" />
-            <path d="M3 15h18" />
-            <path d="M3 9h18" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+            <path d="M3.103 6.034h17.794" />
+            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
         </svg>
     }
 }
 #[component]
-pub fn BrickWallFire(
+pub fn ShoppingBasket(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -70,18 +65,18 @@ pub fn BrickWallFire(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M16 3v2.107" />
-            <path d="M17 9c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 22 17a5 5 0 0 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C13 11.5 16 9 17 9" />
-            <path d="M21 8.274V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.938" />
-            <path d="M3 15h5.253" />
-            <path d="M3 9h8.228" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <path d="m15 11-1 9" />
+            <path d="m19 11-4-7" />
+            <path d="M2 11h20" />
+            <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4" />
+            <path d="M4.5 15.5h15" />
+            <path d="m5 11 4-7" />
+            <path d="m9 11 1 9" />
         </svg>
     }
 }
 #[component]
-pub fn BrickWallShield(
+pub fn ShoppingCart(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -110,14 +105,9 @@ pub fn BrickWallShield(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M12 9v1.258" />
-            <path d="M16 3v5.46" />
-            <path d="M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75" />
-            <path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z" />
-            <path d="M3 15h7" />
-            <path d="M3 9h12.142" />
-            <path d="M8 15v6" />
-            <path d="M8 3v6" />
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
         </svg>
     }
 }

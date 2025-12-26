@@ -1,6 +1,6 @@
 use leptos::{prelude::*, svg::Svg};
 #[component]
-pub fn Image(
+pub fn Rotate3D(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -29,14 +29,14 @@ pub fn Image(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-            <circle cx="9" cy="9" r="2" />
-            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+            <path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2" />
+            <path d="m15.194 13.707 3.814 1.86-1.86 3.814" />
+            <path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4" />
         </svg>
     }
 }
 #[component]
-pub fn ImageDown(
+pub fn RotateCcwKey(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -65,15 +65,16 @@ pub fn ImageDown(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
-            <path d="m14 19 3 3v-5.5" />
-            <path d="m17 22 3-3" />
-            <circle cx="9" cy="9" r="2" />
+            <path d="m14.5 9.5 1 1" />
+            <path d="m15.5 8.5-4 4" />
+            <path d="M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+            <circle cx="10" cy="14" r="2" />
         </svg>
     }
 }
 #[component]
-pub fn ImageMinus(
+pub fn RotateCcw(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -102,15 +103,13 @@ pub fn ImageMinus(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-            <line x1="16" x2="22" y1="5" y2="5" />
-            <circle cx="9" cy="9" r="2" />
-            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
         </svg>
     }
 }
 #[component]
-pub fn ImageOff(
+pub fn RotateCcwSquare(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -139,17 +138,14 @@ pub fn ImageOff(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <line x1="2" x2="22" y1="2" y2="22" />
-            <path d="M10.41 10.41a2 2 0 1 1-2.83-2.83" />
-            <line x1="13.5" x2="6" y1="13.5" y2="21" />
-            <line x1="18" x2="21" y1="12" y2="15" />
-            <path d="M3.59 3.59A1.99 1.99 0 0 0 3 5v14a2 2 0 0 0 2 2h14c.55 0 1.052-.22 1.41-.59" />
-            <path d="M21 15V5a2 2 0 0 0-2-2H9" />
+            <path d="M20 9V7a2 2 0 0 0-2-2h-6" />
+            <path d="m15 2-3 3 3 3" />
+            <path d="M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2" />
         </svg>
     }
 }
 #[component]
-pub fn ImagePlay(
+pub fn RotateCw(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -178,15 +174,13 @@ pub fn ImagePlay(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M15 15.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z" />
-            <path d="M21 12.17V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" />
-            <path d="m6 21 5-5" />
-            <circle cx="9" cy="9" r="2" />
+            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
+            <path d="M21 3v5h-5" />
         </svg>
     }
 }
 #[component]
-pub fn ImagePlus(
+pub fn RotateCwSquare(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -215,89 +209,9 @@ pub fn ImagePlus(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M16 5h6" />
-            <path d="M19 2v6" />
-            <path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" />
-            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-            <circle cx="9" cy="9" r="2" />
-        </svg>
-    }
-}
-#[component]
-pub fn ImageUp(
-    #[prop(default = 24.into(), into)] size: Signal<usize>,
-    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
-    #[prop(default = "none".into(), into)] fill: Signal<String>,
-    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
-    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
-    #[prop(optional)] node_ref: NodeRef<Svg>,
-) -> impl IntoView {
-    let stroke_width = Signal::derive(move || {
-        if absolute_stroke_width.get() {
-            stroke_width.get() * 24 / size.get()
-        } else {
-            stroke_width.get()
-        }
-    });
-    view! {
-        <svg
-            node_ref=node_ref
-            class:lucide=true
-            xmlns="http://www.w3.org/2000/svg"
-            width=size
-            height=size
-            viewBox="0 0 24 24"
-            fill=fill
-            stroke=color
-            stroke-width=stroke_width
-            stroke-linecap="round"
-            stroke-linejoin="round"
-        >
-            <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
-            <path d="m14 19.5 3-3 3 3" />
-            <path d="M17 22v-5.5" />
-            <circle cx="9" cy="9" r="2" />
-        </svg>
-    }
-}
-#[component]
-pub fn ImageUpscale(
-    #[prop(default = 24.into(), into)] size: Signal<usize>,
-    #[prop(default = "currentColor".into(), into)] color: Signal<String>,
-    #[prop(default = "none".into(), into)] fill: Signal<String>,
-    #[prop(default = 2.into(), into)] stroke_width: Signal<usize>,
-    #[prop(default = false.into(), into)] absolute_stroke_width: Signal<bool>,
-    #[prop(optional)] node_ref: NodeRef<Svg>,
-) -> impl IntoView {
-    let stroke_width = Signal::derive(move || {
-        if absolute_stroke_width.get() {
-            stroke_width.get() * 24 / size.get()
-        } else {
-            stroke_width.get()
-        }
-    });
-    view! {
-        <svg
-            node_ref=node_ref
-            class:lucide=true
-            xmlns="http://www.w3.org/2000/svg"
-            width=size
-            height=size
-            viewBox="0 0 24 24"
-            fill=fill
-            stroke=color
-            stroke-width=stroke_width
-            stroke-linecap="round"
-            stroke-linejoin="round"
-        >
-            <path d="M16 3h5v5" />
-            <path d="M17 21h2a2 2 0 0 0 2-2" />
-            <path d="M21 12v3" />
-            <path d="m21 3-5 5" />
-            <path d="M3 7V5a2 2 0 0 1 2-2" />
-            <path d="m5 21 4.144-4.144a1.21 1.21 0 0 1 1.712 0L13 19" />
-            <path d="M9 3h3" />
-            <rect x="3" y="11" width="10" height="10" rx="1" />
+            <path d="M12 5H6a2 2 0 0 0-2 2v3" />
+            <path d="m9 8 3-3-3-3" />
+            <path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
         </svg>
     }
 }
