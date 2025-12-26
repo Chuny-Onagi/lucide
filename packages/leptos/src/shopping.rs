@@ -1,6 +1,6 @@
 use leptos::{prelude::*, svg::Svg};
 #[component]
-pub fn Database(
+pub fn ShoppingBag(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -29,14 +29,14 @@ pub fn Database(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <ellipse cx="12" cy="5" rx="9" ry="3" />
-            <path d="M3 5V19A9 3 0 0 0 21 19V5" />
-            <path d="M3 12A9 3 0 0 0 21 12" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+            <path d="M3.103 6.034h17.794" />
+            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
         </svg>
     }
 }
 #[component]
-pub fn DatabaseBackup(
+pub fn ShoppingBasket(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -65,17 +65,18 @@ pub fn DatabaseBackup(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <ellipse cx="12" cy="5" rx="9" ry="3" />
-            <path d="M3 12a9 3 0 0 0 5 2.69" />
-            <path d="M21 9.3V5" />
-            <path d="M3 5v14a9 3 0 0 0 6.47 2.88" />
-            <path d="M12 12v4h4" />
-            <path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" />
+            <path d="m15 11-1 9" />
+            <path d="m19 11-4-7" />
+            <path d="M2 11h20" />
+            <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4" />
+            <path d="M4.5 15.5h15" />
+            <path d="m5 11 4-7" />
+            <path d="m9 11 1 9" />
         </svg>
     }
 }
 #[component]
-pub fn DatabaseZap(
+pub fn ShoppingCart(
     #[prop(default = 24.into(), into)] size: Signal<usize>,
     #[prop(default = "currentColor".into(), into)] color: Signal<String>,
     #[prop(default = "none".into(), into)] fill: Signal<String>,
@@ -104,11 +105,9 @@ pub fn DatabaseZap(
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <ellipse cx="12" cy="5" rx="9" ry="3" />
-            <path d="M3 5V19A9 3 0 0 0 15 21.84" />
-            <path d="M21 5V8" />
-            <path d="M21 12L18 17H22L19 22" />
-            <path d="M3 12A9 3 0 0 0 14.59 14.87" />
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
         </svg>
     }
 }
